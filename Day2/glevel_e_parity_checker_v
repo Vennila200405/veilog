@@ -1,0 +1,8 @@
+module e_parity_checker(a,b,c,p);
+  input a,b,c;
+  output p;
+  wire w1,w2;
+  xor(w1,a,b);
+  xor(w2,c,p);
+  xor(p,w1,w2);
+endmodule
