@@ -1,0 +1,9 @@
+module full_adder(a,b,c,sum,carry);
+  input a,b,c;
+  output sum,carry;
+  xor(sum,a,b,c);
+  and(w1,a,b);
+  and(w2,b,c);
+  and(w3,a,c);
+  or(carry,w1,w2,w3);
+endmodule
