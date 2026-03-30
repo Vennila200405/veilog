@@ -1,0 +1,13 @@
+module g_inout_tb;
+  reg a;
+  wire y;
+  g_inout uut(a,y);
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars();
+    $monitor("a=%b y=%b",a,y);
+    a=0; #10
+    a=1; #10
+    $finish;
+  end
+endmodule
